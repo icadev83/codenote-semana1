@@ -19,11 +19,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $_SESSION['mensaje'] = "Completa todos los campos del formulario para poder registrar tu ropa deportiva.";
     }
-// Redirigir a la misma página para mostrar el mensaje sin que se duplique al recargar
+// Redirige a la misma página para mostrar el mensaje sin que se duplique al recargar
     header("Location: index.php");
     exit();
 }
-// Recuperar el mensaje de la sesión y luego eliminarlo para evitar que se muestre nuevamente al recargar la página
+// Recupera el mensaje de la sesión y luego eliminarlo para evitar que se muestre nuevamente al recargar la página
 if (isset($_SESSION['mensaje'])) {
     $mensaje = $_SESSION['mensaje'];
     unset($_SESSION['mensaje']);
@@ -152,7 +152,7 @@ if (isset($_SESSION['mensaje'])) {
     <main>
        
         <section class ="formulario">
-           <h2>Formulario de registro</h2>
+           <h2>Registro de entradas</h2>
            <form action="" method= "POST">
             <div>
                 <label for= "referencia">Referencia:</label>
